@@ -1,14 +1,24 @@
 import React from 'react'
 
-export default function Button({ 
-  children, 
-  onClick, 
-  variant = 'primary', 
-  size = 'md', 
-  disabled = false, 
-  className = '', 
-  type = 'button' 
-}) {
+interface ButtonProps {
+  children: React.ReactNode
+  onClick?: () => void
+  variant?: 'primary' | 'secondary' | 'success' | 'warning' | 'error'
+  size?: 'sm' | 'md' | 'lg'
+  disabled?: boolean
+  className?: string
+  type?: 'button' | 'submit' | 'reset'
+}
+
+export const Button: React.FC<ButtonProps> = ({
+  children,
+  onClick,
+  variant = 'primary',
+  size = 'md',
+  disabled = false,
+  className = '',
+  type = 'button'
+}) => {
   const baseClasses = 'font-semibold rounded-full transition-all duration-200 focus:outline-none focus:ring-2 focus:ring-offset-2'
   
   const variantClasses = {
