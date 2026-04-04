@@ -1,8 +1,45 @@
-export default function Card({ children, title }) {
+import React from 'react'
+
+export function Card({ children, className = '', padding = 'md', shadow = 'md' }) {
+  const paddingClasses = {
+    sm: 'p-4',
+    md: 'p-6',
+    lg: 'p-8'
+  }
+
+  const shadowClasses = {
+    none: '',
+    sm: 'shadow-sm',
+    md: 'shadow-md',
+    lg: 'shadow-lg'
+  }
+
+  const classes = `
+    bg-white rounded-2xl border border-gray-200
+    ${paddingClasses[padding]}
+    ${shadowClasses[shadow]}
+    ${className}
+  `
+
   return (
-    <div className="bg-white p-5 rounded-2xl shadow-md border border-gray-100 mb-4">
-      {title && <h2 className="text-xl font-bold mb-3 text-gray-800">{title}</h2>}
+    <div className={classes}>
       {children}
     </div>
-  );
+  )
+}
+
+export function CardHeader({ children, className = '' }) {
+  return (
+    <div className={`mb-4 ${className}`}>
+      {children}
+    </div>
+  )
+}
+
+export function CardContent({ children, className = '' }) {
+  return (
+    <div className={className}>
+      {children}
+    </div>
+  )
 }

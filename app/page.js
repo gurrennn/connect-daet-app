@@ -103,6 +103,21 @@ export default function Home() {
             </CardContent>
           </Card>
 
+          {/* Programs */}
+          <Card className="hover:shadow-lg transition-shadow">
+            <CardHeader>
+              <h3 className="text-xl font-semibold text-gray-800">Tourism Programs</h3>
+            </CardHeader>
+            <CardContent>
+              <p className="text-gray-600 mb-4">
+                Participate in our tourism programs and initiatives that promote sustainable development.
+              </p>
+              <Button variant="primary" className="w-full">
+                View Programs
+              </Button>
+            </CardContent>
+          </Card>
+
           {/* Rewards */}
           <Card className="hover:shadow-lg transition-shadow">
             <CardHeader>
