@@ -13,17 +13,8 @@ export const Navigation: React.FC<NavigationProps> = ({ currentPath }) => {
 
   const navigationItems = [
     { name: 'Home', href: '/' },
-    { name: 'Info', href: '/info' },
-    { name: 'Workflow', href: '/workflow' },
-    { name: 'Museum', href: '/museum' },
-    { name: 'Experiences', href: '/experiences' },
-    { name: 'Programs', href: '/programs' },
-    { name: 'Crisis', href: '/crisis' },
-    { name: 'Shop', href: '/shop' },
-    { name: 'Tours', href: '/tours' },
-    { name: 'Feedback', href: '/feedback' },
     { name: 'Analytics', href: '/analytics' },
-    { name: 'Rewards', href: '/rewards' }
+    { name: 'Admin Dashboard', href: '/admin' },
   ]
 
   const isActive = (href: string) => {

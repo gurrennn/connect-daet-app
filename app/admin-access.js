@@ -3,6 +3,8 @@
 
 localStorage.setItem('userRole', 'admin');
 sessionStorage.setItem('isAdmin', 'true');
-window.location.href = '/analytics';
+window.location.href = '/admin';
 
 // This will give you instant admin access to the dashboard
+
+

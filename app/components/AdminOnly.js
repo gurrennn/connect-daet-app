@@ -12,6 +12,7 @@ const isAdminUser = () => {
   // Also check for admin session
   const adminSession = sessionStorage.getItem('isAdmin')
   
+  // Return true if admin role is set (no login required)
   return isAdmin || adminSession === 'true'
 }
 
@@ -20,9 +21,11 @@ export const setAdminRole = (isAdmin = true) => {
   if (isAdmin) {
     localStorage.setItem('userRole', 'admin')
     sessionStorage.setItem('isAdmin', 'true')
+    sessionStorage.setItem('isLoggedIn', 'true')
   } else {
     localStorage.removeItem('userRole')
     sessionStorage.removeItem('isAdmin')
+    sessionStorage.removeItem('isLoggedIn')
   }
 }
 
