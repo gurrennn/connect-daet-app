@@ -1,6 +1,6 @@
 import React from 'react'
 
-export default function Button({ 
+export const Button = ({ 
   children, 
   onClick, 
   variant = 'primary', 
@@ -8,7 +8,7 @@ export default function Button({
   disabled = false, 
   className = '', 
   type = 'button' 
-}) {
+}) => {
   const baseClasses = 'font-semibold rounded-full transition-all duration-200 focus:outline-none focus:ring-2 focus:ring-offset-2'
   
   const variantClasses = {
