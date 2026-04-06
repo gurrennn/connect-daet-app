@@ -36,6 +36,42 @@ export const getRewardsData = async () => {
   ]
 }
 
+// Tourist spending by duration of stay
+export const getSpendingByDuration = async () => {
+  return [
+    { 
+      duration: '1 Day', 
+      average_spending: 2500, 
+      total_spending: 1250000,
+      tourist_count: 500
+    },
+    { 
+      duration: '2 Days', 
+      average_spending: 4200, 
+      total_spending: 2100000,
+      tourist_count: 500
+    },
+    { 
+      duration: '3-5 Days', 
+      average_spending: 8500, 
+      total_spending: 4250000,
+      tourist_count: 500
+    },
+    { 
+      duration: '1 Week', 
+      average_spending: 15000, 
+      total_spending: 7500000,
+      tourist_count: 500
+    },
+    { 
+      duration: '2 Weeks', 
+      average_spending: 28000, 
+      total_spending: 14000000,
+      tourist_count: 500
+    }
+  ]
+}
+
 export const getSentimentAnalysis = async () => {
   // TODO: Replace with actual query from feedback table
   return {
